@@ -1,4 +1,4 @@
-# Retrofit Cookie Parser
+# Retrofit CSRF Cookie Parser
  Retrofit Based Cookie Parser using Interceptor
 
 
