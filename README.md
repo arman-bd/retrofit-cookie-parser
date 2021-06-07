@@ -3,3 +3,5 @@
 
 
 <img src="screenshot.webp"/>
+
+<img src="screenshot_app.jpg"/>
