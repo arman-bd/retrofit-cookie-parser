@@ -38,6 +38,12 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                             // Login Response [ If Any ]
+                            try {
+                                ((TextView) findViewById(R.id.responseData)).setText(response.body().string());
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+
                         }
 
                         @Override

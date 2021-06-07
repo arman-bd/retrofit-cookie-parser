@@ -22,7 +22,7 @@ public class BasicInterceptor implements okhttp3.Interceptor {
         // Place Authorization Cookie
         if(!CommonConstants.AUTH_COOKIE.equals("")){
             request = request.newBuilder()
-                    .addHeader("Cookie", CommonConstants.AUTH_COOKIE)
+                    .addHeader("Cookie", "XSRF-TOKEN=" + CommonConstants.AUTH_COOKIE)
                     .build();
         }
 
@@ -37,7 +37,6 @@ public class BasicInterceptor implements okhttp3.Interceptor {
 
         // Parse CSRF
         if(!response.headers("Set-Cookie").isEmpty()){
-            HashSet<String> cookies = new HashSet<>();
             for (String header : response.headers("Set-Cookie")) {
                 if(header.contains("XSRF-TOKEN=")){
                     // Found CSRF Token
