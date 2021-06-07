@@ -4,4 +4,4 @@
 
 <img src="screenshot.webp"/>
 
-<img src="screenshot_app.jpg"/>
+<img src="screenshot_app.jpg" width="400"/>
